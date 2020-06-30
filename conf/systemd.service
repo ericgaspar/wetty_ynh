@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 #WorkingDirectory=__FINALPATH__/
-WorkingDirectory=$HOME/.config/yarn/global/node_modules/wetty.js/
+WorkingDirectory=__FINALPATH__/.config/yarn/global/node_modules/wetty.js/
 Environment=NODE_ENV=production
 Environment="__YNH_NODE_LOAD_PATH__"
 ExecStart=/usr/bin/yarn app.js -p __PORT__ --host 127.0.0.1
