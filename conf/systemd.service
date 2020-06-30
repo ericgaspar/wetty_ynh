@@ -9,7 +9,7 @@ Group=__APP__
 WorkingDirectory=__FINALPATH__/
 Environment=NODE_ENV=production
 Environment="__YNH_NODE_LOAD_PATH__"
-ExecStart=__YNH_NPM__ wetty \
+ExecStart=__YARN_BIN_DIR__ wetty \
     --host 127.0.0.1 \
     --port __PORT__ \
     --base __PATH_URL__/ \
