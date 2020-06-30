@@ -6,10 +6,13 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__/
+#WorkingDirectory=__FINALPATH__/
+WorkingDirectory=$HOME/.config/yarn/global/node_modules/wetty.js/
 Environment=NODE_ENV=production
 Environment="__YNH_NODE_LOAD_PATH__"
-ExecStart=/usr/bin/yarn wetty \
+ExecStart=/usr/bin/node app.js -p __PORT__ --host 127.0.0.1
+
+#ExecStart=/usr/bin/yarn wetty \
     --host 127.0.0.1 \
     --port __PORT__ \
     --base __PATH_URL__/ \
@@ -18,3 +21,5 @@ ExecStart=/usr/bin/yarn wetty \
 
 [Install]
 WantedBy=multi-user.target
+
+
